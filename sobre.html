@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Imagens/aerocheck.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerocheck - Sobre</title>
+    <style>
+        main {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alterado de "right" para "flex-end" */
+    position: relative; /* Removido "top" */
+    top: -150px;
+    align-items: center;
+}
+.team {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .team-member {
+            width: 22%;
+            text-align: center;
+        }
+        .team-member h3{
+            
+        }
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Estilo da janela de informação */
+        .janela-info {
+            display: none; /* Começa oculta */
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+        .team-member img {
+            width: 85px; /* Largura fixa */
+            height: 85px; /* Altura fixa */
+            object-fit: cover; /* Garante que a imagem ocupe totalmente o espaço, mantendo a proporção */
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <span id="Logo-location"><h1>AEROCHECK</h1></span>
+
+    </header>         
+    <nav>
+        <ul>
+            <li>
+                <a href="pagina-incial.html">Inicio</a>
+            </li>
+            <li>
+                <a href="modelos.html">Checklist's</a>
+            </li>
+            <li>
+                <a href="sobre.html">Sobre nós</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal (Login) -->
+    <main>
+        <div id="inicio-container">
+           <div>
+            <section>
+                <h2>Quem Somos</h2>
+                <p>Somos uma equipe dedicada a criar soluções inovadoras e impactantes para nossos clientes. Nosso objetivo é fornecer produtos e serviços que atendam às necessidades de cada um, com um toque único de excelência e criatividade. Combinamos a experiência de profissionais apaixonados pelo que fazem com a tecnologia de ponta para entregar resultados que realmente fazem a diferença.</p>
+            </section>
+    
+            <section>
+                <h2>Nossa Missão</h2>
+                <p>Nosso compromisso é ajudar nossos clientes a atingir seu máximo potencial, oferecendo soluções personalizadas que solucionam seus desafios. Trabalhamos com transparência, ética e profissionalismo para construir relações de longo prazo, baseadas na confiança e no respeito.</p>
+            </section>
+    
+            <section>
+                <h2>Nosso Time</h2>
+                <div class="team">
+                    <div class="team-member">
+                        <img src="Imagens/Motivo do meu odio.jpeg" alt="Membro 1">
+                        <h3>Luís Felipe</h3>
+                        <p>líder: Luís Felipe</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="Imagens/Filipe.jpg" alt="Membro 2">
+                        <h3>Filipe Sansoni</h3>
+                        <p>Filipe Sansoni</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="Imagens/Ravi.jpg" alt="Membro 3"><br><br>
+                        <p>Desingner: Ravi de Oliveira</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="Imagens/icopetente.png" alt="Membro 2">
+                        <h3>Henrique Pereira</h3>
+                        <p>Henrique Pereira</p>
+                    </div>
+                </div>
+            </section>
+
+           </div>
+        </div>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 <a href="pagina-mestre.html">Aerocheck</a>. Feito por  Filipe Sansoni, Henrique Pereira, Luis Felipe, Ravi de Oliveira</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

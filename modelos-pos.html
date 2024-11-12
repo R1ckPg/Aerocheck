@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerocheck - Modelos</title>
+    <link rel="shortcut icon" href="Imagens/aerocheck.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center; /* Centraliza os modelos */
+            align-items: center;
+            flex-wrap: wrap; /* Permite que os modelos quebrem em várias linhas */
+            gap: 20px; /* Espaço entre os modelos */
+        }
+        .model-box a {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            transition: transform 0.3s ease; /* Adiciona uma transição suave */
+        }
+        .model-box a:hover {
+            transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <a href="index.html"><span id="Logo-location"><h1>AEROCHECK</h1></span></a>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="pagina-incial.html">Inicio</a>
+            </li>
+            <li>
+                <a href="modelos.html">Checklist's</a>
+            </li>
+            <li>
+                <a href="sobre.html">Sobre nós</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="model-container">
+            <div class="model-box">
+                <a href="check-pos-p.html">
+                    <div class="model-title">Modelo Pequeno</div>
+                    <img src="Imagens/Pequeno-1.jpg" alt="Modelo 1">
+                </a>
+            </div>
+            <div class="model-box">
+                <a href="#">
+                    <div class="model-title">Modelo Médio</div>
+                    <img src="Imagens/Medio-2.jpg" alt="Modelo 2">
+                </a>
+            </div>
+            <div class="model-box">
+                <a href="#">
+                    <div class="model-title">Modelo Grande</div>
+                    <img src="Imagens/Grande-2.jpg" alt="Modelo 2">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 <a href="pagina-mestre.html">Aerocheck</a>. Feito por Luis Felipe, Henrique Pereira, Filipe Sansoni, Ravi de Oliveira</p>
+    </footer>
+</body>
+</html>

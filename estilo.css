@@ -1,0 +1,366 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+    /* Definindo as cores da paleta */
+    :root {
+        --dark-blue: #182a36;
+        --light-blue: #56d8ff;
+        --light-gray: #2f4a6e;
+        --off-white: #f5f5f5;
+        --border-form: #acd7ff;
+        --text-color: #ffffff;
+        --input-bg: #f0f0f0;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color: #2b4d6f;
+        position: relative;
+        z-index: 1000; /* Garantir que a navbar fique visível e clicável */
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 10px;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: #e0e6ed; /* Cor do texto */
+        text-decoration: none;
+        font-size: 18px;
+        padding: 8px 15px;
+        z-index: 1;
+        transition: background-color 0.3s ease;
+        display: inline-block; /* Garantir que o link seja tratado como bloco */
+        pointer-events: auto; /* Garante que o clique no link funcione corretamente */
+    }
+    
+    /* Certifique-se de que a área de clique seja sensível */
+    nav ul li a:hover {
+        background-color: #406082; /* Cor ao passar o mouse */
+        border-radius: 5px;
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    #inicio-container {
+        background-color: var(--off-white);
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 400px;
+        width: 100%;
+        margin-top: 12.5%;
+        margin-left: -15.5%;
+        margin-bottom: -3%;
+        position: relative;
+        left: -32%;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    #inicio-container h2 {
+        color: var(--dark-blue);
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    #inicio-container p {
+        color: var(--light-gray);
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    /* Tabela de checklist */
+    /* Tabela de checklist */
+    #checklist-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: var(--input-bg);
+        width: 96%;
+        margin-left: 25px;
+    }
+    #incio-container{
+        border: 1px solid var(--border-form);
+    }
+
+    #checklist-container th,
+    #checklist-container td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid var(--border-form);
+    }
+
+    #checklist-container th {
+        background-color: var(--light-gray);
+        color: var(--text-color);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    #checklist-container td {
+        background-color: var(--off-white);
+        color: #000;
+    }
+
+    /* Estilo do select */
+    #checklist-container select {
+        width: 100%;
+        padding: 8px;
+        font-size: 1rem;
+        border: 2px solid var(--border-form);
+        border-radius: 4px;
+        background-color: var(--off-white);
+        color: #000;
+        box-sizing: border-box;
+        appearance: none; /* Remove a seta padrão */
+    }
+
+    #checklist-container select:focus {
+        border-color: var(--dark-blue);
+        outline: none;
+    }
+
+    #checklist-container option {
+        color: #000; /* Cor do texto das opções */
+    }
+
+    /* Botão de submit */
+    #checklist-container button {
+        width: 100%;
+        padding: 24px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--text-color);
+        background-color: var(--light-blue);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+        width: 96%;
+        margin-left: 25px;
+        margin-bottom: 15px;
+    }
+
+    #checklist-container button:hover {
+        background-color: var(--dark-blue);
+    }
+
+
+    /* Estilização geral */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Garamond', sans-serif;
+        background: url('Imagens/Background-repeat.png') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        color: var(--text-color);
+    }
+
+    /* Cabeçalho */
+    header {
+        background-color: var(--dark-blue);
+        color: var(--text-color);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    #Logo-location {
+        background: url('Imagens/aerocheck.png') no-repeat center; /* Certifique-se de que o caminho está correto */
+        width: 150px; /* Largura do logo */
+        height: 90px; /* Altura do logo */
+        display: block; /* Garante que o elemento se comporte como um bloco */
+        background-size: contain; /* Faz com que a imagem se ajuste ao tamanho do elemento */
+        text-indent: -9999px; /* Muda o método de ocultar o texto */
+        overflow: hidden; /* Oculta qualquer conteúdo que transborde */
+        position: relative;
+        right: -10px;
+        /* Adicione borda ou margem se necessário */
+    }
+
+
+    header h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .logo-header {
+        position: absolute;
+        left: 20px;
+    }
+
+    .logo-header img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /* Conteúdo principal */
+    a{
+        text-decoration: none;
+    }
+
+    /* Container de login */
+    .login-container {
+        background-color: var(--light-gray);
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid var(--border-form);
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0.1), 
+                    0 0 2.5px var(--border-form), 
+                    0 0 0px var(--border-form), 
+                    0 0 7.5px var(--border-form);
+        text-align: center;
+        width: 350px;
+        max-width: 100%;
+    }
+
+    /* Formulário de login */
+    .login-form {
+        width: 100%;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid var(--light-blue);
+        border-radius: 5px;
+        background-color: var(--input-bg);
+        font-size: 14px;
+        transition: border-color 0.3s;
+        box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+    }
+
+    .login-form input:focus {
+        outline: none;
+        border-color: var(--dark-blue);
+    }
+
+    /* Botão de submit */
+    .login-form button {
+        width: 100%;
+        padding: 12px;
+        background-color: var(--light-blue);
+        border: none;
+        border-radius: 5px;
+        color: var(--text-color);
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .login-form button:hover {
+        background-color: var(--dark-blue);
+    }
+
+    /* Rodapé */
+    footer {
+        background-color: var(--dark-blue);
+        color: var(--text-color);
+        text-align: center;
+        padding: 10px 0;
+        font-size: 14px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    /* Estilização do container de modelos */
+    /* Adicionando ao CSS existente */
+
+    /* Container de modelos */
+    .model-container {
+        display: flex;
+        justify-content: center; /* Centraliza os modelos */
+        align-items: flex-start; /* Alinha os itens no início do container */
+        margin: 20px; /* Margem em torno do container */
+        flex-wrap: wrap; /* Permite que os modelos quebrem em várias linhas */
+        gap: 20px; /* Espaço entre os modelos */
+    }
+    
+    /* Estilização de cada modelo */
+    .model-box {
+        background-color: var(--light-gray); /* Fundo para cada modelo */
+        border: 1px solid var(--border-form); /* Borda ao redor de cada modelo */
+        border-radius: 5px; /* Cantos arredondados */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 
+                    0 0 10px var(--border-form); /* Sombreamento leve */
+        margin: 10px; /* Margem em torno de cada modelo */
+        width: 300px; /* Largura fixa para cada modelo */
+        max-width: 100%; /* Garante que não exceda a largura do container */
+        text-align: center; /* Centraliza o texto */
+        overflow: hidden; /* Garante que nada transborde */
+    }
+    
+    /* Estilização do título do modelo */
+    .model-title {
+        font-size: 18px; /* Tamanho da fonte do título */
+        font-weight: 600; /* Peso da fonte */
+        color: #fff; /* Cor do texto do título */
+        margin: 10px 0; /* Margem acima e abaixo do título */
+    }
+    
+    /* Estilização das imagens dos modelos */
+    .model-box img {
+        width: 100%; /* Imagem ocupa toda a largura do modelo */
+        height: 200px; /* Altura fixa para todas as imagens */
+        object-fit: cover; /* Garante que a imagem ocupe totalmente o espaço, mantendo a proporção */
+        border-top-left-radius: 5px; /* Arredondar canto superior esquerdo */
+        border-top-right-radius: 5px; /* Arredondar canto superior direito */
+    }
+    
+    footer a{
+        color: #ffffff;
+    }
+    /* Container principal centralizado */
+    #container-master {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 100px auto 253px auto; /* Margem superior e inferior */
+        
+        /* Aparência */
+        background-color: var(--border-form);
+        width: 50%;
+        max-width: 800px; /* Limita a largura máxima em telas grandes */
+        padding: 20px;
+        border: 3px solid var(--light-blue);
+        border-radius: 15px;
+        
+        /* Centralização */
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        #container-master {
+            width: 80%; /* Largura ajustada para telas menores */
+        }
+    }
+
+    /* Estilização do conteúdo dentro do container-master */
+    #container-master > div {
+        color: var(--text-color);
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        line-height: 1.6;
+    }

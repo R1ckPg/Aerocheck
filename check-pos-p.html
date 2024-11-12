@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>         .botao {
+        padding: 10px 20px;
+        background-color: #4c9baf;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    /* Estilo da janela de informação */
+    .janela-info {
+        display: none; /* Começa oculta */
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        color: #000;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 200px;
+    }
+    .janela-info ul{
+        list-style: none;
+    }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Pré-Voo - Cessna 182</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="Imagens/aerocheck.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <span id="Logo-location"><h1>Aerocheck</h1></span>
+        <h1>Aerocheck - Checklist Pós-Voo (Cessna 182)</h1>
+    </header>
+    <button class="botao" onclick="toggleJanela()">Ajuda</button>
+    <div class="janela-info" id="janelaInfo">
+        <h3>Significados:
+        </h3>
+        <ul>
+            <li>FT = Faltando</li>
+            <li>NA = Não Aplicável</li>
+            <li>OK = Satisfatório</li>
+            <li>DN = Danificado</li>
+        </ul>
+    </div>
+    
+    <main>
+        <div id="checklist-container">
+            <form action="check-pos-p.php" method="post">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mistura Corte Total</td>
+                            <td>
+                                <select name="Mistura_Corte_Total" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Avionics - OFF</td>
+                            <td>
+                                <select name="Avionics-OFF" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Luzes de Navegação - OFF</td>
+                            <td>
+                                <select name="Luzes_de_Navegação-OFF" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Chave de Ignição - OFF</td>
+                            <td>
+                                <select name="Chave_de_Ignição-OFF" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Freio de Estacionamento - Setar</td>
+                            <td>
+                                <select name="Freio_de_Estacionamento-Setar" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Controle de Flap - Recolher</td>
+                            <td>
+                                <select name="Controle_de_Flap-Recolher" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hélice - Verificar Posição</td>
+                            <td>
+                                <select name="Hélice" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Capô do Motor Fechado e Fixado</td>
+                            <td>
+                                <select name="capo_do_motor" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tanques de Combustível - Checar Quantidade Restante</td>
+                            <td>
+                                <select name="tanques_de_combustivel" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tie Downs (Amarração)</td>
+                            <td>
+                                <select name="Tie_downs" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cobertura do Para-Brisa</td>
+                            <td>
+                                <select name="cobertura" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Registros de Voo (Hobbs)</td>
+                            <td>
+                                <select name="requisitos_de_voo" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        
+                        <!-- Adicione mais linhas conforme necessário -->
+                    </tbody>
+                </table>
+                <button type="submit">Enviar Checklist</button>
+            </form>
+        </div>
+    </main>
+    <footer><p>&copy; 2024 <a href="pagina-mestre.html">Aerocheck</a>. Feito por Luis Felipe, Henrique Pereira, Filipe Sansoni, Ravi de Oliveira</p></footer>
+
+    <script>
+        function toggleJanela() {
+            const janela = document.getElementById("janelaInfo");
+            // Alterna a visibilidade da janela
+            if (janela.style.display === "none" || janela.style.display === "") {
+                janela.style.display = "block";
+            } else {
+                janela.style.display = "none";
+            }
+        }
+    </script></body>
+</html>

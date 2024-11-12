@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+         .botao {
+            padding: 10px 20px;
+            background-color: #4c9baf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Estilo da janela de informação */
+        .janela-info {
+            display: none; /* Começa oculta */
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            color: #000;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+        .janela-info ul{
+            list-style: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Pré-Voo - Cessna 182</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="Imagens/aerocheck.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <span id="Logo-location"><h1>Aerocheck</h1></span>
+        <h1>Aerocheck - Checklist Pré-Voo (Cessna 182)</h1>
+    </header>
+    <button class="botao" onclick="toggleJanela()">Ajuda</button>
+    <div class="janela-info" id="janelaInfo">
+        <h3>Significados:
+        </h3>
+        <ul>
+            <li>FT = Faltando</li>
+            <li>NA = Não Aplicável</li>
+            <li>OK = Satisfatório</li>
+            <li>DN = Danificado</li>
+        </ul>
+    </div>
+    <main>
+        <div id="checklist-container">
+            <form action="chek-pre-p.php" method="post">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Combustível</td>
+                            <td>
+                                <select name="combustivel" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Óleo</td>
+                            <td>
+                                <select name="oleo" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Combustível</td>
+                            <td>
+                                <select name="combustivel" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Filtro-de-Ar</td>
+                            <td>
+                                <select name="Filtro-de-Ar" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Sistemas de freios</td>
+                            <td>
+                                <select name="Sistema_de_freios" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Pneus de rodas</td>
+                            <td>
+                                <select name="pneus_de_rodas" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Superfície de controle</td>
+                            <td>
+                                <select name="superficie_de_controle" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Luzes de Navegação</td>
+                            <td>
+                                <select name="Luzes_de_navegacao" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Luz Estroboscópica (Beacon)</td>
+                            <td>
+                                <select name="Luz_Estroboscópica" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Tanque de Dreno de Combustível</td>
+                            <td>
+                                <select name="Tanque_de_dreno_de_combustível" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Hélice</td>
+                            <td>
+                                <select name="Hélice" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Capô do Motor (Verificar Fixação)</td>
+                            <td>
+                                <select name="Capô_do_Motor" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Vidros do Cockpit</td>
+                            <td>
+                                <select name="Vidros_do_Cockpit" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Flaps</td>
+                            <td>
+                                <select name="Flaps" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Antenas</td>
+                            <td>
+                                <select name="Antenas" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Trim Tab</td>
+                            <td>
+                                <select name="Trim_Tab" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Extintor de Incêndio</td>
+                            <td>
+                                <select name="Extintor_de_Incêndio" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>Cintos de Segurança</td>
+                            <td>
+                                <select name="Cintos_de_Segurança" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="ft">FT</option>
+                                    <option value="na">NA</option>
+                                    <option value="ok">OK</option>
+                                    <option value="dn">DN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- Adicione mais linhas conforme necessário -->
+                    </tbody>
+                </table>
+                <button type="submit">Enviar Checklist</button>
+            </form>
+        </div>
+    </main>
+    <footer><p>&copy; 2024 <a href="pagina-mestre.html">Aerocheck</a>. Feito por Luis Felipe, Henrique Pereira, Filipe Sansoni, Ravi de Oliveira</p></footer>
+    <script>
+        function toggleJanela() {
+            const janela = document.getElementById("janelaInfo");
+            // Alterna a visibilidade da janela
+            if (janela.style.display === "none" || janela.style.display === "") {
+                janela.style.display = "block";
+            } else {
+                janela.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
